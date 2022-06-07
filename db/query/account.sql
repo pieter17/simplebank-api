@@ -11,9 +11,9 @@ INSERT INTO accounts (
 SELECT * FROM accounts
 WHERE id = $1 LIMIT 1;
 
--- name: ListAccount :many
+-- name: ListAccounts :many
 SELECT * FROM accounts
-ORDER BY name
+ORDER BY owner
 LIMIT $1
 OFFSET $2;
 
